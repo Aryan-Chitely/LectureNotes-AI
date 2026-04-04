@@ -99,9 +99,12 @@ The goal is to help students capture **every important concept** without the str
 4. **Open browser to:** `http://localhost:10000`  
 
 ## 8. **Screenshots:**
-![first Page](LA2.png)
 
+<img width="1918" height="966" alt="Image" src="https://github.com/user-attachments/assets/43b68aac-fb01-409d-b4e2-d99557cb702c" />
+<br>
 
-![Second Page](LA1.png)
+<img width="1590" height="799" alt="Image" src="https://github.com/user-attachments/assets/691b0e2f-50c0-4ad8-97ac-c467509a56f2" />
+<br>
 
+<img width="1584" height="798" alt="Image" src="https://github.com/user-attachments/assets/22293453-8593-4fc6-80a5-d74910dd0317" />
 
