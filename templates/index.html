@@ -7,75 +7,73 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-:root {
-    --bg-main: #0f172a;
-    --bg-card: #1e293b;
-    --bg-hover: #334155;
-
-    --text-main: #e2e8f0;
-    --text-muted: #94a3b8;
-
-    --primary: #3b82f6;
-    --primary-hover: #2563eb;
-
-    --border: #334155;
-}
+    
+    :root {
+        --bg-main: #0f172a;
+        --bg-card: #1e293b;
+        --bg-hover: #334155;    
+        --text-main: #e2e8f0;
+        --text-muted: #94a3b8;
+        --primary: #3b82f6;
+        --primary-hover: #2563eb;
+        --border: #334155;
+    }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+    }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 20px;
+    }
+        .ocean-header {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+            box-shadow: none;
+    }
+        .header-text h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            background: none;
+    }
+        .header-text .tagline {
+        color: var(--text-muted);
+    }
+        .main-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            box-shadow: none;
+    }
+        .result-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            height: 520px;
+    }
+
+        .upload-area {
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 50px 20px;
+            background: transparent;
         }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg-main);
-    color: var(--text-main);
-    min-height: 100vh;
-    padding: 20px;
-}
-.ocean-header {
-    background: var(--bg-card);
-    border-radius: 16px;
-    padding: 25px 30px;
-    margin-bottom: 30px;
-    border: 1px solid var(--border);
-    box-shadow: none;
-}
-.header-text h1 {
-    font-size: 2.5rem;
-    color: var(--text-main);
-    background: none;
-}
-.header-text .tagline {
-    color: var(--text-muted);
-}
-.main-card {
-    background: var(--bg-card);
-    border-radius: 16px;
-    padding: 30px;
-    border: 1px solid var(--border);
-    box-shadow: none;
-}
-.result-card {
-    background: var(--bg-card);
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    height: 520px;
-}
-
-.upload-area {
-    border: 2px dashed var(--border);
-    border-radius: 12px;
-    padding: 50px 20px;
-    background: transparent;
-}
-
-.upload-area:hover {
-    border-color: var(--primary);
-    background: rgba(59, 130, 246, 0.05);
-    transform: none;
-}
+        .upload-area:hover {
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.05);
+            transform: none;
+        }
 
         .container {
             max-width: 1400px;
@@ -84,7 +82,6 @@ body {
             z-index: 1;
         }
 
-        /* Modern Header */
 
         .ocean-header::before {
             content: '';
@@ -137,7 +134,7 @@ body {
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
-        /* Main Card */
+
 
         .main-card:hover {
             transform: translateY(-5px);
@@ -168,7 +165,6 @@ body {
                 transparent);
         }
 
-        /* Upload Area */
         
         .upload-icon {
             font-size: 5rem;
@@ -208,7 +204,6 @@ body {
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* File Info */
         .file-info {
             background: linear-gradient(135deg, rgba(0, 180, 219, 0.2), rgba(38, 208, 206, 0.3));
             border: 2px solid var(--ocean-teal);
@@ -224,7 +219,6 @@ body {
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Modern Button */
         .modern-btn {
             background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-teal));
             color: white;
@@ -261,7 +255,6 @@ body {
             transform: none;
         }
 
-        /* Loading Section */
         .loading-section {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
@@ -305,7 +298,6 @@ body {
             margin-top: 40px;
         }
 
-        /* Result Cards - FIXED UNIFORM HEIGHT */
         .result-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
@@ -345,29 +337,31 @@ body {
 
         .card-body {
             padding: 25px;
-            flex: 1; /* Take remaining space */
+            flex: 1; 
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* Prevent overflow */
+            overflow: hidden; 
         }
 
-        /* Textareas for Transcript and Summary */
-        textarea {
+       textarea {
             width: 100%;
-            height: 100%; /* Fill available space */
+            height: 100%;
             min-height: 350px;
             max-height: 350px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid var(--ocean-light);
+
+            background: #ffffff;              
+            color: #0f172a;                  
+
+            border: 2px solid var(--border);
             border-radius: 15px;
             padding: 20px;
+
             font-family: 'Poppins', sans-serif;
             font-size: 0.95rem;
             line-height: 1.6;
-            color: var(--ocean-dark);
+
             resize: vertical;
             transition: all 0.3s ease;
-            flex: 1;
         }
 
         textarea:focus {
@@ -376,16 +370,14 @@ body {
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
         }
 
-        /* Quiz Container */
         #quizContainer {
-            overflow-y: auto; /* Make scrollable */
+            overflow-y: auto; 
             height: 100%;
             display: flex;
             flex-direction: column;
-            padding-right: 5px; /* Space for scrollbar */
+            padding-right: 5px; 
         }
 
-        /* Custom Scrollbar for Quiz Container */
         #quizContainer::-webkit-scrollbar {
             width: 8px;
         }
@@ -404,9 +396,9 @@ body {
             background: var(--accent-gold);
         }
 
-        /* Quiz Items */
         .quiz-item {
-            background: rgba(255, 255, 255, 0.9);
+            background: #ffffff;
+            color: #0f172a;
             border: 2px solid var(--ocean-light);
             border-radius: 15px;
             padding: 15px;
@@ -414,7 +406,7 @@ body {
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0; /* Don't shrink */
+            flex-shrink: 0; 
         }
 
         .quiz-item:hover {
@@ -440,7 +432,6 @@ body {
             font-size: 0.9rem;
         }
 
-        /* Show More/Less Button */
         .quiz-controls {
             text-align: center;
             margin-top: 15px;
@@ -472,7 +463,6 @@ body {
             box-shadow: 0 5px 15px rgba(0, 180, 219, 0.3);
         }
 
-        /* Progress Bar */
         .progress-container {
             height: 8px;
             background: rgba(255, 255, 255, 0.1);
@@ -489,7 +479,6 @@ body {
             border-radius: 4px;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .header-text h1 { font-size: 2.5rem; }
             .section-title { font-size: 1.8rem; }
@@ -517,7 +506,6 @@ body {
             </div>
         </header>
 
-        <!-- Upload Section -->
         <div class="main-card" id="uploadSection">
             <h2 class="section-title">Upload Lecture Audio</h2>
             
@@ -558,7 +546,6 @@ body {
             </button>
         </div>
 
-        <!-- Loading Section -->
         <div class="loading-section" id="loadingSection">
             <div class="loader"></div>
             <h3 style="color: white; margin-bottom: 20px; font-size: 1.8rem; font-family: 'Montserrat', sans-serif;">
@@ -577,12 +564,10 @@ body {
             </p>
         </div>
 
-        <!-- Results Section -->
         <div class="main-card" id="resultsSection" style="display: none;">
             <h2 class="section-title">Generated Notes & Quiz</h2>
             
             <div class="results-grid">
-                <!-- Transcript Card -->
                 <div class="result-card">
                     <div class="card-header">
                         <h3><i class="fas fa-file-alt"></i> Full Transcript</h3>
@@ -592,7 +577,6 @@ body {
                     </div>
                 </div>
 
-                <!-- Summary Card -->
                 <div class="result-card">
                     <div class="card-header">
                         <h3><i class="fas fa-chart-line"></i> AI Summary</h3>
@@ -602,14 +586,12 @@ body {
                     </div>
                 </div>
 
-                <!-- Quiz Card -->
                 <div class="result-card">
                     <div class="card-header">
                         <h3><i class="fas fa-question-circle"></i> Quiz Questions</h3>
                     </div>
                     <div class="card-body">
                         <div id="quizContainer">
-                            <!-- Quiz questions will be inserted here -->
                         </div>
                     </div>
                 </div>
@@ -624,7 +606,6 @@ body {
     </div>
 
     <script>
-        // DOM Elements
         const dropZone = document.getElementById('dropZone');
         const fileInput = document.getElementById('fileInput');
         const fileInfo = document.getElementById('fileInfo');
@@ -645,7 +626,6 @@ body {
 
         let selectedFile = null;
 
-        // Event Listeners
         dropZone.addEventListener('click', () => fileInput.click());
         
         dropZone.addEventListener('dragover', (e) => {
@@ -684,7 +664,6 @@ body {
         processBtn.addEventListener('click', processFile);
         newUploadBtn.addEventListener('click', resetApp);
 
-        // File Handling
         function handleFile(file) {
             if (!file.type.startsWith('audio/')) {
                 showAlert('Please select an audio file (MP3, WAV, M4A)', 'error');
@@ -704,15 +683,12 @@ body {
             processBtn.disabled = false;
         }
 
-        // Process File
         async function processFile() {
             if (!selectedFile) return;
             
-            // Show loading section
             uploadSection.style.display = 'none';
             loadingSection.style.display = 'block';
             
-            // Progress simulation
             const steps = [
                 { progress: 20, text: 'Uploading audio file...' },
                 { progress: 40, text: 'Transcribing audio to text...' },
@@ -727,7 +703,6 @@ body {
                 await sleep(800);
             }
             
-            // Send to backend
             const formData = new FormData();
             formData.append('audio', selectedFile);
             
@@ -747,18 +722,15 @@ body {
                     showAlert('Error: ' + result.error, 'error');
                     resetApp();
                 } else {
-                    // Display results
                     transcriptArea.value = result.transcript;
                     summaryArea.value = result.summary;
                     
-                    // Display quiz with Show More/Less functionality
                     if (result.quiz && result.quiz.length > 0) {
                         displayQuizWithControls(result.quiz);
                     } else {
                         quizContainer.innerHTML = '<p style="text-align: center; color: var(--ocean-light); padding: 20px;">No quiz questions generated.</p>';
                     }
                     
-                    // Show results
                     progressBar.style.width = '100%';
                     loadingText.textContent = 'Complete!';
                     
@@ -774,17 +746,14 @@ body {
             }
         }
 
-        // Display Quiz with Show More/Less Controls
         function displayQuizWithControls(quizQuestions) {
             quizContainer.innerHTML = '';
-            const questionsToShow = 5; // Show first 5 questions initially
+            const questionsToShow = 5; 
             
-            // Create all quiz items
             quizQuestions.forEach((q, index) => {
                 const quizItem = document.createElement('div');
                 quizItem.className = 'quiz-item';
                 
-                // Remove any existing "Q1: " prefix if present
                 let questionText = q.question;
                 if (questionText.startsWith(`Q${index + 1}: `)) {
                     questionText = questionText.replace(`Q${index + 1}: `, '');
@@ -804,13 +773,11 @@ body {
                 
                 quizContainer.appendChild(quizItem);
                 
-                // Hide questions beyond first 5 initially
                 if (index >= questionsToShow) {
                     quizItem.style.display = 'none';
                 }
             });
             
-            // Add Show More/Less button if more than 5 questions
             if (quizQuestions.length > questionsToShow) {
                 const controlsDiv = document.createElement('div');
                 controlsDiv.className = 'quiz-controls';
@@ -830,13 +797,11 @@ body {
                     showingAll = !showingAll;
                     
                     if (showingAll) {
-                        // Show all questions
                         allQuizItems.forEach(item => item.style.display = 'block');
                         showMoreBtn.innerHTML = `
                             <i class="fas fa-chevron-up"></i> Show Less
                         `;
                     } else {
-                        // Show only first 5
                         allQuizItems.forEach((item, index) => {
                             item.style.display = index < questionsToShow ? 'block' : 'none';
                         });
@@ -846,13 +811,11 @@ body {
                         `;
                     }
                     
-                    // Smooth scroll to keep button in view
                     controlsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 });
             }
         }
 
-        // Reset App
         function resetApp() {
             selectedFile = null;
             fileInput.value = '';
@@ -867,7 +830,6 @@ body {
             quizContainer.innerHTML = '';
         }
 
-        // Utility Functions
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
@@ -903,7 +865,6 @@ body {
             }, 3000);
         }
 
-        // Add CSS for animations
         const style = document.createElement('style');
         style.textContent = `
             @keyframes slideInRight {
